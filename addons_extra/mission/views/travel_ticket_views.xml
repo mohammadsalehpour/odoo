@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_tree_mission_travel_ticket" model="ir.ui.view">
+        <field name="name">view.tree.mission.travel.ticket</field>
+        <field name="model">mission.travel.ticket</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="employee_id"/>
+                <field name="date"/>
+                <field name="city_from"/>
+                <field name="city_to"/>
+                <field name="vehicle_type"/>
+                <field name="image"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

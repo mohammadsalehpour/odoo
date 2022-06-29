@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_tree_mission_cost_percentage" model="ir.ui.view">
+        <field name="name">view.tree.mission.cost.percentage</field>
+        <field name="model">mission.cost.percentage</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="partner_id"/>
+                <field name="percentage"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
