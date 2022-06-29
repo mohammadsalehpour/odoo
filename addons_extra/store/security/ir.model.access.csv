@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_store_manager,access.store.manager,model_store_store,group_store_manager,1,1,1,1
+access_store,access.store,model_store_store,group_store_manager,1,1,1,1
+access_product,access.product,model_store_product,group_store_manager,1,1,1,1
+access_store_user,access.store.user,model_store_store,group_store_user,1,0,0,0

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_store_form" model="ir.ui.view">
+        <field name="name">store.store.form</field>
+        <field name="model">store.store</field>
+        <field name="arch" type="xml">
+            <form string="Store">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="place"/>
+                            <field name="size"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="view_store_products_page" string="Products">
+                            <field name="product_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_store_tree" model="ir.ui.view">
+        <field name="name">store.store.tree</field>
+        <field name="model">store.store</field>
+        <field name="arch" type="xml">
+            <tree string="Store">
+                <field name="name"/>
+                <field name="place"/>
+                <field name="size"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="store_action" model="ir.actions.act_window">
+        <field name="name">Stores</field>
+        <field name="res_model">store.store</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

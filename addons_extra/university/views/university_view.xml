@@ -13,6 +13,11 @@
                             <field name="class_count" />
                         </group>
                     </group>
+                    <notebook>
+                        <page name="view_university_students_page" string="Students">
+                            <field name="student_ids"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -22,7 +27,7 @@
         <field name="name">university.university.tree</field>
         <field name="model">university.university</field>
         <field name="arch" type="xml">
-            <tree string="University" editable="top">
+            <tree string="University">
                 <field name="name" />
                 <field name="build_year" />
                 <field name="class_count" />
