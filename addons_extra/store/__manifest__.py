@@ -3,10 +3,10 @@
 
 
 {
-    'name': 'University',
+    'name': 'Store',
     'version': '1.0.0',
-    'category': 'DameDast',
-    'sequence': 10,
+    'category': 'DameDast/Store',
+    'sequence': 20,
     'summary': 'Software from DameDast',
     'author': "Mohammad Salehpour",
     'description': "",
@@ -16,10 +16,10 @@
     'auto_install': False,
     'license': 'LGPL-3',
     'data': [
-        'security/university_security.xml',
+        'security/store_security.xml',
         'security/ir.model.access.csv',
-        'views/university_view.xml',
-        'views/student_view.xml',
+        'views/store_view.xml',
+        'views/product_view.xml',
         'views/menus_view.xml',
     ],
 }

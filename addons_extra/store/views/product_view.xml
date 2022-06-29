@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_form" model="ir.ui.view">
+        <field name="name">store.product.form</field>
+        <field name="model">store.product</field>
+        <field name="arch" type="xml">
+            <form string="Product">
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="price" />
+                        <field name="color" />
+                        <field name="store_id" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_product_tree" model="ir.ui.view">
+        <field name="name">store.product.tree</field>
+        <field name="model">store.product</field>
+        <field name="arch" type="xml">
+            <tree string="Product" editable="top">
+                <field name="name" />
+                <field name="price" />
+                <field name="color" />
+                <field name="store_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_action" model="ir.actions.act_window">
+        <field name="name">Products</field>
+        <field name="res_model">store.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

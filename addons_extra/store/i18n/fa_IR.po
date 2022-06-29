@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* store
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 11:23+0000\n"
+"PO-Revision-Date: 2022-06-29 11:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__color
+msgid "Color"
+msgstr "رنگ"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__create_uid
+#: model:ir.model.fields,field_description:store.field_store_store__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__create_date
+#: model:ir.model.fields,field_description:store.field_store_store__create_date
+msgid "Created on"
+msgstr "ایجاد شده در"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__display_name
+#: model:ir.model.fields,field_description:store.field_store_store__display_name
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__id
+#: model:ir.model.fields,field_description:store.field_store_store__id
+msgid "ID"
+msgstr "شناسه"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product____last_update
+#: model:ir.model.fields,field_description:store.field_store_store____last_update
+msgid "Last Modified on"
+msgstr "آخرین تغییر در"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__write_uid
+#: model:ir.model.fields,field_description:store.field_store_store__write_uid
+msgid "Last Updated by"
+msgstr "آخرین به روز رسانی توسط"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__write_date
+#: model:ir.model.fields,field_description:store.field_store_store__write_date
+msgid "Last Updated on"
+msgstr "آخرین بروز رسانی در تاریخ"
+
+#. module: store
+#: model:res.groups,name:store.group_store_manager
+msgid "Manager"
+msgstr "مدیر"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_store__place
+msgid "Place Name"
+msgstr "نام مکان"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__price
+msgid "Price"
+msgstr "قیمت"
+
+#. module: store
+#: model_terms:ir.ui.view,arch_db:store.view_product_form
+#: model_terms:ir.ui.view,arch_db:store.view_product_tree
+msgid "Product"
+msgstr "محصول"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__name
+msgid "Product Name"
+msgstr "نام محصول"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.product_action
+#: model:ir.ui.menu,name:store.product
+msgid "Products"
+msgstr "محصولات"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_store__size
+msgid "Size Num"
+msgstr "ظرفیت"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_product__store_id
+#: model:ir.module.category,name:store.module_category_store
+#: model:ir.ui.menu,name:store.store
+#: model:ir.ui.menu,name:store.store_menu_root
+#: model_terms:ir.ui.view,arch_db:store.view_store_form
+#: model_terms:ir.ui.view,arch_db:store.view_store_tree
+msgid "Store"
+msgstr "فروشگاه"
+
+#. module: store
+#: model:ir.module.category,description:store.module_category_store
+msgid "Access For Store"
+msgstr "دسترسی برای فروشگاه"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_store_store__name
+msgid "Store Name"
+msgstr "نام فروشگاه"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.store_action
+msgid "Stores"
+msgstr "فروشگاه ها"
+
+#. module: store
+#: model:res.groups,name:store.group_store_user
+msgid "User"
+msgstr "کاربر"
+
+#. module: store
+#: model:ir.model.fields,help:store.field_store_product__name
+#: model:ir.model.fields,help:store.field_store_store__name
+msgid "any text"
+msgstr "هر متنی"
+
+#. module: store
+#: model:ir.model,name:store.model_store_product
+msgid "store.product"
+msgstr "فروشگاه"
+
+#. module: store
+#: model:ir.model,name:store.model_store_store
+msgid "store.store"
+msgstr "فروشگاه"
