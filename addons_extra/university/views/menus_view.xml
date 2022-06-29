@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem id="university_menu_root" name="University" groups="group_university_manager" sequence="10" />
+
+    <menuitem id="university" name="Universities" parent="university_menu_root" action="university.view_university_action" groups="group_university_manager" sequence="10" />
+
+    <!-- Users Menu -->
+    <menuitem id="university_menu_users" name="Users" parent="university_menu_root" groups="group_university_manager" sequence="20" />
+
+    <menuitem id="university_menu_student" name="Students" parent="university_menu_users" action="university.view_student_action" groups="group_university_manager" sequence="10" />
+
+</odoo>

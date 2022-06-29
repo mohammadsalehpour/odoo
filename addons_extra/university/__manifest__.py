@@ -4,14 +4,22 @@
 
 {
     'name': 'University',
-    'version': '1.0',
-    'category': 'Sales/CRM',
-    'sequence': 2,
-    'summary': 'Track leads and close opportunities',
+    'version': '1.0.0',
+    'category': 'DameDast/University',
+    'sequence': 10,
+    'summary': 'Software from DameDast',
+    'author': "Mohammad Salehpour",
     'description': "",
-    'website': 'https://www.university.com',
+    'website': 'https://damedast.com',
     'installable': True,
     'application': True,
     'auto_install': False,
     'license': 'LGPL-3',
+    'data': [
+        'security/university_security.xml',
+        'security/ir.model.access.csv',
+        'views/university_view.xml',
+        'views/student_view.xml',
+        'views/menus_view.xml',
+    ],
 }
