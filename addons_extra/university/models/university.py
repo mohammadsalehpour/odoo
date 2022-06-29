@@ -4,8 +4,10 @@
 from odoo import fields, models
 
 
-class Users(models.Model):
+class University(models.Model):
     _name = 'university.university'
 
-    name = fields.Char(string="")
-    build_year = fields.Integer()
+    name = fields.Char(string='University Name', index=True, help='any text', translate=True, size=80)
+    build_year = fields.Char(string='Build Year')
+    class_count = fields.Integer("Class Count")
+    
