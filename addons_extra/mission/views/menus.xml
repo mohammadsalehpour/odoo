@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_mission_mission" model="ir.actions.act_window">
+        <field name="name">Missions</field>
+        <field name="res_model">mission.mission</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        id="menu_mission_root"
+        name="Mission"
+		web_icon="mission,static/description/icon.png"/>
+		
+    <menuitem 
+        id="menu_mission_mission"
+        name="Missions"
+        parent="menu_mission_root"
+        action="action_mission_mission"
+        sequence="0"/>
+
+</odoo>
