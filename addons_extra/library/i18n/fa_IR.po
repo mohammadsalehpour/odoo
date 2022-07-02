@@ -1,0 +1,229 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* library
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-02 09:06+0000\n"
+"PO-Revision-Date: 2022-07-02 09:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: library
+#: model:ir.module.category,description:library.module_category_library
+msgid "Access For Library"
+msgstr "دسترسی برای کتابخانه"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__author_id
+#: model:ir.model.fields,field_description:library.field_library_book__author_ids
+#: model:ir.ui.menu,name:library.author_menu
+msgid "Author"
+msgstr "نویسنده"
+
+#. module: library
+#: model:ir.actions.act_window,name:library.view_author_book_action
+#: model_terms:ir.ui.view,arch_db:library.view_author_book_form
+#: model_terms:ir.ui.view,arch_db:library.view_author_book_tree
+msgid "Author Books"
+msgstr "کتاب های نویسنده"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__book_id
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__book_id
+#: model_terms:ir.ui.view,arch_db:library.view_book_form
+msgid "Book"
+msgstr "کتاب"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__name
+#: model_terms:ir.ui.view,arch_db:library.view_book_form
+msgid "Book Name"
+msgstr "نام کتاب"
+
+#. module: library
+#: model:ir.actions.act_window,name:library.view_book_action
+#: model:ir.model.fields,field_description:library.field_res_partner__book_ids
+#: model:ir.model.fields,field_description:library.field_res_users__book_ids
+#: model:ir.ui.menu,name:library.book_menu
+#: model_terms:ir.ui.view,arch_db:library.view_book_tree
+#: model_terms:ir.ui.view,arch_db:library.view_partner_form_books
+msgid "Books"
+msgstr "کتاب ها"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__borrower_id
+msgid "Borrower"
+msgstr "امانت گیرنده"
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.view_borrower_book_form
+#: model_terms:ir.ui.view,arch_db:library.view_borrower_book_tree
+msgid "Borrower Books"
+msgstr "کتاب های امانت گرفته شده"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__borrower_ids
+msgid "Borrowers"
+msgstr "امانت گیرنده ها"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__companionship_percentage
+msgid "Companionship Percentage"
+msgstr "درصد همراهی"
+
+#. module: library
+#: model:ir.model,name:library.model_res_partner
+msgid "Contact"
+msgstr "مخاطب"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__create_uid
+#: model:ir.model.fields,field_description:library.field_library_book__create_uid
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__create_date
+#: model:ir.model.fields,field_description:library.field_library_book__create_date
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__create_date
+msgid "Created on"
+msgstr "ایجاد شده در"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__delivery_time
+msgid "Delivery Time"
+msgstr "زمان تحویل"
+
+#. module: library
+#: model:ir.ui.menu,name:library.deposit_menu
+msgid "Deposit"
+msgstr "امانت"
+
+#. module: library
+#: model:ir.actions.act_window,name:library.view_borrower_book_action
+msgid "Deposit list"
+msgstr "لیست امانت ها"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__description
+msgid "Description"
+msgstr "شرح"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__display_name
+#: model:ir.model.fields,field_description:library.field_library_book__display_name
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__display_name
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__end_date
+msgid "End Date"
+msgstr "تاریخ پایان"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__id
+#: model:ir.model.fields,field_description:library.field_library_book__id
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__id
+msgid "ID"
+msgstr "شناسه"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__isbn
+msgid "ISBN Code"
+msgstr "کد شابک"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book____last_update
+#: model:ir.model.fields,field_description:library.field_library_book____last_update
+#: model:ir.model.fields,field_description:library.field_library_borrower_book____last_update
+msgid "Last Modified on"
+msgstr "آخرین تغییر در"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__write_uid
+#: model:ir.model.fields,field_description:library.field_library_book__write_uid
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__write_uid
+msgid "Last Updated by"
+msgstr "آخرین به روز رسانی توسط"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__write_date
+#: model:ir.model.fields,field_description:library.field_library_book__write_date
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__write_date
+msgid "Last Updated on"
+msgstr "آخرین بروز رسانی در تاریخ"
+
+#. module: library
+#: model:ir.module.category,name:library.module_category_library
+#: model:ir.ui.menu,name:library.library_menu_root
+msgid "Library"
+msgstr "کتابخانه"
+
+#. module: library
+#: model:res.groups,name:library.group_library_manager
+msgid "Manager"
+msgstr "مدیر"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__note
+msgid "Note"
+msgstr "یادداشت"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__pages_count
+msgid "Number Of Pages"
+msgstr "تعدادی از صفحات"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__publication_date
+msgid "Publication Date"
+msgstr "تاریخ انتشار"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_author_book__publication_time
+msgid "Publication Time"
+msgstr "زمان انتشار"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__serial
+msgid "Serial Num"
+msgstr "شماره سریال"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_borrower_book__start_date
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+#. module: library
+#: model:res.groups,name:library.group_library_user
+msgid "User"
+msgstr "کاربر"
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__name
+msgid "any text"
+msgstr "هر متن"
+
+#. module: library
+#: model:ir.model,name:library.model_library_author_book
+msgid "library.author.book"
+msgstr "کتابخانه"
+
+#. module: library
+#: model:ir.model,name:library.model_library_book
+msgid "library.book"
+msgstr "کتابخانه"
+
+#. module: library
+#: model:ir.model,name:library.model_library_borrower_book
+msgid "library.borrower.book"
+msgstr "کتابخانه"

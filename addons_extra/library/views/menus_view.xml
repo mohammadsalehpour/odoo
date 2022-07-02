@@ -7,10 +7,11 @@
     <menuitem id="book_menu" name="Books" parent="library_menu_root" action="library.view_book_action" groups="group_library_manager" sequence="10" />
     
     <!-- Users Menu -->
-    <menuitem id="library_menu_users" name="Users" parent="library_menu_root" groups="group_library_manager" sequence="20" />
+    <!-- <menuitem id="library_menu_users" name="Users" parent="library_menu_root" groups="group_library_manager" sequence="20" /> -->
     
-    <menuitem id="library_menu_author" name="Authors" parent="library_menu_users" action="library.view_author_action" groups="group_library_manager" sequence="10" />
-    <menuitem id="library_menu_borrower" name="Borrowers" parent="library_menu_users" action="library.view_borrower_action" groups="group_library_manager" sequence="20" />
+    <!-- <menuitem id="library_menu_author" name="Authors" parent="library_menu_users" action="library.view_author_action" groups="group_library_manager" sequence="10" /> -->
+    <!-- <menuitem id="library_menu_borrower" name="Borrowers" parent="library_menu_users" action="library.view_borrower_action" groups="group_library_manager" sequence="20" /> -->
     
+    <menuitem id="author_menu" name="Author" parent="library_menu_root" action="library.view_author_book_action" groups="group_library_manager" sequence="20" />
     <menuitem id="deposit_menu" name="Deposit" parent="library_menu_root" action="library.view_borrower_book_action" groups="group_library_manager" sequence="30" />
 </odoo>

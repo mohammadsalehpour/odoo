@@ -5,3 +5,4 @@ from . import author
 from . import book
 from . import borrower
 from . import borrower_book
+from . import author_book

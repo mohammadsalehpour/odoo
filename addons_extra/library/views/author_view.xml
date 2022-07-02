@@ -1,41 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_author_form" model="ir.ui.view">
-        <field name="name">library.author.form</field>
-        <field name="model">library.author</field>
-        <field name="arch" type="xml">
-            <form string="Author">
-                <sheet>
-                    <group>
-                        <group>
-                            <field name="name" />
-                            <field name="age" />
-                        </group>
-                    </group>
-                    <notebook>
-                        <page name="view_author_books_page" string="Books">
-                            <field name="book_ids"/>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
-        </field>
-    </record>
 
-    <record id="view_author_tree" model="ir.ui.view">
-        <field name="name">library.author.tree</field>
-        <field name="model">library.author</field>
+    <!-- <record id="view_partner_form_auther_books" model="ir.ui.view">
+        <field name="name">view.form.res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
-            <tree string="Author">
-                <field name="name" />
-                <field name="age" />
-            </tree>
+            <xpath expr="//page[last()]" position="after">
+                <page string="My Books">
+                    <field name="author_book_ids" />
+                </page>
+            </xpath>
         </field>
-    </record>
+    </record> -->
 
-    <record id="view_author_action" model="ir.actions.act_window">
-        <field name="name">Authors</field>
-        <field name="res_model">library.author</field>
-        <field name="view_mode">tree,form</field>
-    </record>
 </odoo>

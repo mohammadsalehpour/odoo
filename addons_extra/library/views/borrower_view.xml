@@ -1,40 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_borrower_form" model="ir.ui.view">
-        <field name="name">library.borrower.form</field>
-        <field name="model">library.borrower</field>
+    <!-- <record id="view_partner_form_borrower_books" model="ir.ui.view">
+        <field name="name">view.form.res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
-            <form string="Borrower">
-                <sheet>
-                    <group>
-                        <group>
-                            <field name="name" />
-                            <field name="age" />
-                            <field name="book_ids" />
-                        </group>
-                    </group>
-                </sheet>
-            </form>
+            <xpath expr="//page[last()]" position="after">
+                <page string="My Borrower Books">
+                    <field name="borrower_book_ids" />
+                </page>
+            </xpath>
         </field>
-    </record>
-
-    <record id="view_borrower_tree" model="ir.ui.view">
-        <field name="name">library.borrower.tree</field>
-        <field name="model">library.borrower</field>
-        <field name="arch" type="xml">
-            <tree string="Borrower">
-                <field name="name" />
-                <field name="age" />
-                <field name="book_ids" widget="many2many_tags" />
-            </tree>
-        </field>
-    </record>
-
-    <record id="view_borrower_action" model="ir.actions.act_window">
-        <field name="name">Borrowers</field>
-        <field name="res_model">library.borrower</field>
-        <field name="view_mode">tree,form</field>
-    </record>
+    </record> -->
 
 </odoo>

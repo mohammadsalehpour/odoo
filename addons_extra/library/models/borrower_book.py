@@ -7,18 +7,18 @@ from odoo import fields, models
 class BorrowerBook(models.Model):
     _name = 'library.borrower.book'
 
-    note = fields.Text()
+
+    book_id = fields.Many2one('library.book', required=True, string="Book")
+    borrower_id = fields.Many2one('res.partner', required=True, string="Borrower")
     start_date = fields.Date(required=True)
     end_date = fields.Date(required=True)
-    delivery_time = fields.Date(required=True)
-
-    book_id = fields.Many2one('library.book', string="Book")
-    borrower_id = fields.Many2one('library.borrower', string="Borrower")
+    delivery_time = fields.Date()
+    note = fields.Text()
 
     
     def name_get(self):
         result = []
         for b in self:
-            res = b.book_id.name
+            res = "(Book: " + b.book_id.name + ", Borrower: " + b.borrower_id.name + " )"
             result.append((b.id, res))
         return result

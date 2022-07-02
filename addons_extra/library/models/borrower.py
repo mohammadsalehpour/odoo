@@ -5,9 +5,7 @@ from odoo import fields, models
 
 
 class Borrower(models.Model):
-    _name = 'library.borrower'
-
-    name = fields.Char(string='Borrower Name', index=True, help='any text', translate=True, size=80)
-    age = fields.Char(string='Age')
-    book_ids = fields.One2many('library.borrower.book', 'borrower_id')
+    _inherit = 'res.partner'
+    
+    borrower_book_ids = fields.One2many('library.borrower.book', 'borrower_id', string='Borrower Books')
     
