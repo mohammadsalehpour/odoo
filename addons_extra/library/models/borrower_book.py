@@ -14,4 +14,11 @@ class BorrowerBook(models.Model):
 
     book_id = fields.Many2one('library.book', string="Book")
     borrower_id = fields.Many2one('library.borrower', string="Borrower")
+
     
+    def name_get(self):
+        result = []
+        for b in self:
+            res = b.book_id.name
+            result.append((b.id, res))
+        return result

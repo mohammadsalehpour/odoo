@@ -4,7 +4,7 @@
         <field name="name">library.borrower.book.form</field>
         <field name="model">library.borrower.book</field>
         <field name="arch" type="xml">
-            <form string="borrower_book">
+            <form string="BorrowerBook">
                 <sheet>
                     <group>
                         <group>
@@ -25,10 +25,13 @@
         <field name="name">library.borrower.book.tree</field>
         <field name="model">library.borrower.book</field>
         <field name="arch" type="xml">
-            <tree string="borrower_book">
-                <field name="name" />
-                <field name="pages_count" />
-                <field name="author_id" />
+            <tree string="Borrower Books">
+                <field name="note" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="delivery_time" />
+                <field name="book_id" />
+                <field name="borrower_id" />
             </tree>
         </field>
     </record>

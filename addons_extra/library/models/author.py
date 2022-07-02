@@ -9,5 +9,5 @@ class Author(models.Model):
 
     name = fields.Char(string='Author Name', index=True, help='any text', translate=True, size=80)
     age = fields.Char(string='Age')
-    book_ids = fields.One2many('library.book', 'book_ids')
+    book_ids = fields.One2many('library.book', 'author_id')
     

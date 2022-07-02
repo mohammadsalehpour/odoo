@@ -11,7 +11,7 @@
                         <group>
                             <field name="name" />
                             <field name="age" />
-                            <field name="book_id" />
+                            <field name="book_ids" />
                         </group>
                     </group>
                 </sheet>
@@ -23,10 +23,10 @@
         <field name="name">library.borrower.tree</field>
         <field name="model">library.borrower</field>
         <field name="arch" type="xml">
-            <tree string="Borrower" editable="top">
+            <tree string="Borrower">
                 <field name="name" />
                 <field name="age" />
-                <field name="book_id" />
+                <field name="book_ids" widget="many2many_tags" />
             </tree>
         </field>
     </record>
