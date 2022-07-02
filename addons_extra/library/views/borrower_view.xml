@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_borrower_form" model="ir.ui.view">
+        <field name="name">library.borrower.form</field>
+        <field name="model">library.borrower</field>
+        <field name="arch" type="xml">
+            <form string="Borrower">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="age" />
+                            <field name="book_ids" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_borrower_tree" model="ir.ui.view">
+        <field name="name">library.borrower.tree</field>
+        <field name="model">library.borrower</field>
+        <field name="arch" type="xml">
+            <tree string="Borrower">
+                <field name="name" />
+                <field name="age" />
+                <field name="book_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_borrower_action" model="ir.actions.act_window">
+        <field name="name">Borrowers</field>
+        <field name="res_model">library.borrower</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

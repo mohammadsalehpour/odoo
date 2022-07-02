@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_borrower_book_form" model="ir.ui.view">
+        <field name="name">library.borrower.book.form</field>
+        <field name="model">library.borrower.book</field>
+        <field name="arch" type="xml">
+            <form string="BorrowerBook">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="note" />
+                            <field name="start_date" />
+                            <field name="end_date" />
+                            <field name="delivery_time" />
+                            <field name="book_id" />
+                            <field name="borrower_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_borrower_book_tree" model="ir.ui.view">
+        <field name="name">library.borrower.book.tree</field>
+        <field name="model">library.borrower.book</field>
+        <field name="arch" type="xml">
+            <tree string="Borrower Books">
+                <field name="note" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="delivery_time" />
+                <field name="book_id" />
+                <field name="borrower_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_borrower_book_action" model="ir.actions.act_window">
+        <field name="name">Deposit list</field>
+        <field name="res_model">library.borrower.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
