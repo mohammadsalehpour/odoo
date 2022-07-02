@@ -5,9 +5,7 @@ from odoo import fields, models
 
 
 class Author(models.Model):
-    _name = 'library.author'
-
-    name = fields.Char(string='Author Name', index=True, help='any text', translate=True, size=80)
-    age = fields.Char(string='Age')
-    book_ids = fields.One2many('library.book', 'author_id')
+    _inherit = 'res.partner'
+    
+    author_book_ids = fields.One2many('library.author.book', 'author_id', string='Author Books')
     

@@ -4,18 +4,20 @@
         <field name="name">library.borrower.book.form</field>
         <field name="model">library.borrower.book</field>
         <field name="arch" type="xml">
-            <form string="BorrowerBook">
+            <form string="Borrower Books">
                 <sheet>
-                    <group>
-                        <group>
-                            <field name="note" />
-                            <field name="start_date" />
-                            <field name="end_date" />
-                            <field name="delivery_time" />
-                            <field name="book_id" />
-                            <field name="borrower_id" />
-                        </group>
+                    <group col="4">
+                        <h5><field name="book_id" /></h5>
+                        <h5><field name="borrower_id" /></h5>
                     </group>
+                    <group col="4">
+                        <field name="start_date" />
+                        <field name="end_date" />
+                    </group>
+                    <group>
+                        <field name="delivery_time" />
+                        <field name="note" />
+					</group>
                 </sheet>
             </form>
         </field>

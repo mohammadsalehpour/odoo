@@ -9,6 +9,7 @@
     'sequence': 30,
     'summary': 'Software from DameDast',
     'author': "Mohammad Salehpour",
+    'depends' : ['contacts'],
     'description': "",
     'website': 'https://damedast.com',
     'installable': True,
@@ -20,8 +21,9 @@
         'security/ir.model.access.csv',
         'views/book_view.xml',
         'views/author_view.xml',
-        'views/borrower_book_view.xml',
+        'views/author_book_view.xml',
         'views/borrower_view.xml',
+        'views/borrower_book_view.xml',
         'views/menus_view.xml',
     ],
 }

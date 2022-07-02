@@ -6,16 +6,35 @@
         <field name="arch" type="xml">
             <form string="Book">
                 <sheet>
-                    <group>
-                        <group>
-                            <field name="name" />
-                            <field name="pages_count" />
-                            <field name="author_id" />
-                        </group>
+                    <h1>
+                        <field name="name" default_focus="1" placeholder="Book Name" />
+                    </h1>
+                    <group col="3">
+                        <h3>
+                            <field name="serial" default_focus="2" placeholder="Serial" />
+                        </h3>
+                        <h3>
+                            <field name="isbn" default_focus="3" placeholder="ISBN" />
+                        </h3>
+                        <h3>
+                            <field name="pages_count" default_focus="4" placeholder="Pages Count" />
+                        </h3>
                     </group>
+
+                    <!-- <group>
+                        <field name="author_ids" widget="many2many_tags" />
+                    </group>
+
+                    <group>
+                        <field name="borrower_ids" widget="many2many_tags" />
+                    </group> -->
+
                     <notebook>
+                        <page name="view_book_author_page" string="Authors">
+                            <field name="author_ids" />
+                        </page>
                         <page name="view_book_borrowers_page" string="Borrowers">
-                            <field name="borrower_ids"/>
+                            <field name="borrower_ids" />
                         </page>
                     </notebook>
                 </sheet>
@@ -27,10 +46,13 @@
         <field name="name">library.book.tree</field>
         <field name="model">library.book</field>
         <field name="arch" type="xml">
-            <tree string="Book">
+            <tree string="Books">
                 <field name="name" />
+                <field name="serial" />
+                <field name="isbn" />
                 <field name="pages_count" />
-                <field name="author_id" />
+                <field name="author_ids" widget="many2many_tags" />
+                <field name="borrower_ids" widget="many2many_tags" />
             </tree>
         </field>
     </record>
