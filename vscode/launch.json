@@ -10,7 +10,7 @@
             "console":"integratedTerminal",
             "program":"${workspaceRoot}/odoo-bin",
             "args": [
-               "--config=${workspaceRoot}/odoo.conf",
+               "--config=${workspaceRoot}/odoo.conf"
             ],
             "cwd":"${workspaceRoot}",
             "env": {},
