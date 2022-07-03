@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+/web/static/lib/tempusdominus/tempusdominus.js
+-->
+<odoo>
+    <data>
+        <template id="qunit_suite" name="persian_datepicker_tests" inherit_id="web.qunit_suite">
+            <xpath expr="//t[@t-set='head']" position="inside">
+                <script type="text/javascript" src="/persian_datepicker/static/tests/PersianCalendar_Tests.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
