@@ -6024,6 +6024,8 @@ Docs & License: https://fullcalendar.io/
             var calendarCustomButtons = optionsManager.computed.customButtons || {};
             var calendarButtonTextOverrides = optionsManager.overrides.buttonText || {};
             var calendarButtonText = optionsManager.computed.buttonText || {};
+            
+            // console.log("buttonStr", buttonStr);
             if (buttonStr) {
                 buttonStr.split(' ').forEach(function (buttonGroupStr, i) {
                     var groupChildren = [];
@@ -6094,6 +6096,7 @@ Docs & License: https://fullcalendar.io/
                             }
                         }
                     });
+                    // console.log("groupChildren", groupChildren[0]);
                     if (groupChildren.length > 1) {
                         groupEl = document.createElement('div');
                         var buttonGroupClassName = theme.getClass('buttonGroup');
@@ -6108,6 +6111,7 @@ Docs & License: https://fullcalendar.io/
                     }
                 });
             }
+            // console.log("sectionEl", sectionEl);
             return sectionEl;
         };
         Toolbar.prototype.updateToday = function (isTodayEnabled) {
@@ -6374,14 +6378,26 @@ Docs & License: https://fullcalendar.io/
     // -----------------------------------------------------------------------------------------------------------------
     // Computes what the title at the top of the calendar should be for this view
     function computeTitle(dateProfile, viewOptions) {
+        console.log("dateProfile :", dateProfile);
+        // console.log("viewOptions :", viewOptions);
         var range;
         // for views that span a large unit of time, show the proper interval, ignoring stray days before and after
         if (/^(year|month)$/.test(dateProfile.currentRangeUnit)) {
+            console.log("currentRange :", dateProfile.currentRange);
             range = dateProfile.currentRange;
         }
         else { // for day units or smaller, use the actual day range
+            console.log("activeRange :", dateProfile.activeRange);
             range = dateProfile.activeRange;
         }
+        
+        console.log("moment :", moment(new Date()).locale("fa-IR").jYear());
+        console.log("start :", range.start);
+        console.log("Persian start :", moment(range.start).locale('fa').format('jYYYY/jMM/jDD'));
+        console.log("end :", range.end);
+        console.log("Persian end :", moment(range.end).locale('fa').format('jYYYY/jMM/jDD'));
+        console.log("context :", this.context.dateEnv.formatRange(range.start, range.end, createFormatter(viewOptions.titleFormat || computeTitleFormat(dateProfile), viewOptions.titleRangeSeparator), { isEndExclusive: dateProfile.isRangeAllDay }));
+
         return this.context.dateEnv.formatRange(range.start, range.end, createFormatter(viewOptions.titleFormat || computeTitleFormat(dateProfile), viewOptions.titleRangeSeparator), { isEndExclusive: dateProfile.isRangeAllDay });
     }
     // Generates the format string that should be used to generate the title for the current date range.

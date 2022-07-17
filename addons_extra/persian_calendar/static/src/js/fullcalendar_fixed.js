@@ -10266,7 +10266,7 @@ Calendar.defaults = {
 	//allDayDefault: undefined,
 
 	// locale
-	isRTL: false,
+	isRTL: true,
 	buttonText: {
 		prev: "prev",
 		next: "next",
@@ -10762,6 +10762,7 @@ function Header(calendar) {
 				}
 			});
 		}
+		console.log(sectionEl);
 
 		return sectionEl;
 	}

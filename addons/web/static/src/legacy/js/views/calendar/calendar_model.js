@@ -469,13 +469,17 @@ return AbstractModel.extend({
             weekNumbersWithinDays: true,
             weekNumberCalculation: function (date) {
                 // Since FullCalendar v4 ISO 8601 week date is preferred so we force the old system
-                return moment(date).week();
+                // ? M.S
+                // return moment(date).week();
+                let pDate = moment(moment(date).locale('fa').format('jYYYY/jMM/jDD'), 'jYYYY/jMM/jDD').jWeeks();
+                return pDate;
+                // ? M.S ^
             },
             weekLabel: _t("Week"),
             allDayText: _t("All day"),
-            monthNames: moment.months(),
-            monthNamesShort: moment.monthsShort(),
-            dayNames: moment.weekdays(),
+            monthNames: moment(moment(new Date()).locale('fa').format('jYYYY/jMM/jDD'), 'jYYYY/jMM/jDD').jMonths(),
+            monthNamesShort: moment(new Date()).locale('fa').format('jMMM'),
+            dayNames: moment(moment(new Date()).locale('fa').format('jYYYY/jMM/jDD'), 'jYYYY/jMM/jDD').weekday(),
             dayNamesShort: moment.weekdaysShort(),
             dayNamesMin: moment.weekdaysMin(),
             firstDay: this.week_start,

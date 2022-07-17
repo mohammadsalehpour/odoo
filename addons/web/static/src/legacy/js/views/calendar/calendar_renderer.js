@@ -510,7 +510,7 @@ return AbstractRenderer.extend({
                 if (view.type === 'dayGridMonth' && event.extendedProps.record) {
                     var start = event.extendedProps.r_start || event.start;
                     var end = event.extendedProps.r_end || event.end;
-                    $(this.el).find(_.str.sprintf('.fc-day[data-date="%s"]', moment(start).format('YYYY-MM-DD'))).addClass('fc-has-event');
+                    $(this.el).find(_.str.sprintf('.fc-day[data-date="%s"]', moment(start).format('jYYYY-jMM-jDD'))).addClass('fc-has-event');
                     // Detect if the event occurs in just one day
                     // note: add & remove 1 min to avoid issues with 00:00
                     var isSameDayEvent = moment(start).clone().add(1, 'minute').isSame(moment(end).clone().subtract(1, 'minute'), 'day');
@@ -569,13 +569,13 @@ return AbstractRenderer.extend({
             },
             views: {
                 timeGridDay: {
-                    columnHeaderFormat: 'LL'
+                    columnHeaderFormat: 'jD jMMMM jYYYY'
                 },
                 timeGridWeek: {
-                    columnHeaderFormat: 'ddd D'
+                    columnHeaderFormat: 'ddd jD'
                 },
                 dayGridMonth: {
-                    columnHeaderFormat: 'dddd'
+                    columnHeaderFormat: 'ddd'
                 },
                 dayGridYear: {
                     weekNumbers: false
@@ -616,7 +616,7 @@ return AbstractRenderer.extend({
      */
     _initCalendar: function () {
         this.calendarElement = this.$(".o_calendar_widget")[0];
-        var locale = moment.locale();
+        var locale = moment.locale("fa-IR");
 
         var fcOptions = this._getFullCalendarOptions({
             locale: locale, // reset locale when fullcalendar has already been instanciated before now
@@ -629,20 +629,105 @@ return AbstractRenderer.extend({
      *
      * @private
      */
+    // _initCalendarMini: function () {
+    //     var self = this;
+    //     this.$small_calendar = this.$(".o_calendar_mini");
+    //     // ? M.S
+    //     this.$small_calendar.persianDatepicker({
+    //         months: ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"],
+    //         dowTitle: ["شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه"],
+    //         shortDowTitle: ["ش", "ی", "د", "س", "چ", "پ", "ج"],
+    //         showGregorianDate: !1,
+    //         persianNumbers: !0,
+    //         formatDate: "YYYY/MM/DD",
+    //         selectedBefore: !1,
+    //         selectedDate: null,
+    //         startDate: null,
+    //         endDate: null,
+    //         prevArrow: '\u25c4',
+    //         nextArrow: '\u25ba',
+    //         theme: 'default',
+    //         alwaysShow: 1,
+    //         selectableYears: null,
+    //         selectableMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    //         cellWidth: 25, // by px
+    //         cellHeight: 20, // by px
+    //         fontSize: 13, // by px
+    //         isRTL: 1,
+    //         calendarPosition: {
+    //             x: 0,
+    //             y: 0,
+    //         },
+    //         onShow: function () {},
+    //         onHide: function () {},
+    //         onSelect: function () {
+    //             // alert(self.$small_calendar.attr("data-jdate"));
+    //             // console.log("datum");
+    //             // console.log(datum);
+                
+    //             self.trigger_up('changeDate', {
+    //                 date: moment(new Date(moment(self.$small_calendar.attr("data-jdate"), 'jYYYY/jM/jD').format('YYYY-MM-DD')))
+    //             });
+    //         },
+    //         onRender: function () {}
+    //     });
+    // },
+    // _initCalendarMini: function () {
+    //     var self = this;
+    //     this.$small_calendar = this.$(".o_calendar_mini");
+    //     // ? M.S
+    //     this.$small_calendar.persianDatepicker({
+    //         calendar: {
+    //             persian: {
+    //                 enabled: true,
+    //                 locale: 'fa',
+    //                 showHint: true,
+    //                 leapYearMode: "astronomical" // "astronomical"
+    //             },
+    //             gregorian: {
+    //                 enabled: false,
+    //                 showHint: true,
+    //                 locale: 'en'
+    //             }
+    //         },
+    //         altField: '.o_calendar_mini',
+    //         altFormat: 'LLLL',
+    //         inline: true,
+    //         viewMode: 'day',
+    //         format: "lll",
+    //         navigator: {
+    //             scroll: {
+    //                 enabled: true
+    //             }
+    //         },
+    //         dayPicker: {
+    //             enabled: true
+    //         },
+    //         yearPicker: {
+    //             enabled: true
+    //         },
+    //         timePicker: {
+    //             enabled: false,
+    //             meridian: {
+    //                 enabled: true
+    //             }
+    //         },
+    //     });
+    // },
     _initCalendarMini: function () {
         var self = this;
         this.$small_calendar = this.$(".o_calendar_mini");
-        this.$small_calendar.datepicker({
-            'onSelect': function (datum, obj) {
-                self.trigger_up('changeDate', {
-                    date: moment(new Date(+obj.currentYear , +obj.currentMonth, +obj.currentDay))
-                });
-            },
-            'showOtherMonths': true,
-            'dayNamesMin': this.state.fc_options.dayNamesMin.map(x => x[0]),
-            'monthNames': this.state.fc_options.monthNamesShort,
-            'firstDay': this.state.fc_options.firstDay,
-        });
+        // this.$small_calendar.datepicker({
+        //     'onSelect': function (datum, obj) {
+        //         self.trigger_up('changeDate', {
+        //             date: moment(new Date(+obj.currentYear , +obj.currentMonth, +obj.currentDay))
+        //         });
+        //     },
+        //     'showOtherMonths': true,
+        //     'dayNamesMin': this.state.fc_options.dayNamesMin.map(x => x[0]),
+        //     'monthNames': this.state.fc_options.monthNamesShort,
+        //     'firstDay': this.state.fc_options.firstDay,
+        // });
     },
     /**
      * Initialize the sidebar

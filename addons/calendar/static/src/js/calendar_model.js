@@ -15,8 +15,10 @@
             });
         },
         async _getCalendarEventData(events) {
+            console.log("events", events);
             const calendarEventData = await this._super(...arguments);
             const calendarEventByAttendeeData = await this._calendarEventByAttendee(calendarEventData);
+            console.log("calendarEventByAttendeeData", calendarEventByAttendeeData);
             return calendarEventByAttendeeData;
         },
         /**

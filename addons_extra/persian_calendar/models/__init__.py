@@ -1,1 +1,3 @@
-from . import p_calendar
+from . import HttpExtensions
+from . import UsersExtensions
+from . import ir_qweb_fields
